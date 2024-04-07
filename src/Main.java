@@ -1,15 +1,48 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import javax.swing.*;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+// Model
+public class Main {
+    private List<String> textLines = new ArrayList<>();
+
+    public void addTextLine(String line) {
+        textLines.add(line);
+    }
+
+    public void removeTextLine(int index) {
+        textLines.remove(index);
+    }
+
+    // Other methods for text editing
+
+    public void saveToFile(String filePath) throws IOException {
+        Files.write(Paths.get(filePath), textLines);
+    }
+
+    public void loadFromFile(String filePath) throws IOException {
+        textLines = Files.readAllLines(Paths.get(filePath));
+    }
+
+    // Recursive method to traverse directory
+    public void traverseDirectory(File directory) {
+        if (directory.isDirectory()) {
+            File[] files = directory.listFiles();
+            if (files != null) {
+                for (File file : files) {
+                    if (file.isDirectory()) {
+                        traverseDirectory(file);
+                    } else {
+                        // Process file
+                    }
+                }
+            }
         }
     }
 }
+
