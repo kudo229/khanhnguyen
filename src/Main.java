@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-// Model
+
 public class Main {
     private List<String> textLines = new ArrayList<>();
 
@@ -18,18 +18,12 @@ public class Main {
     public void removeTextLine(int index) {
         textLines.remove(index);
     }
-
-    // Other methods for text editing
-
     public void saveToFile(String filePath) throws IOException {
         Files.write(Paths.get(filePath), textLines);
     }
-
     public void loadFromFile(String filePath) throws IOException {
         textLines = Files.readAllLines(Paths.get(filePath));
     }
-
-    // Recursive method to traverse directory
     public void traverseDirectory(File directory) {
         if (directory.isDirectory()) {
             File[] files = directory.listFiles();
@@ -38,7 +32,7 @@ public class Main {
                     if (file.isDirectory()) {
                         traverseDirectory(file);
                     } else {
-                        // Process file
+
                     }
                 }
             }
