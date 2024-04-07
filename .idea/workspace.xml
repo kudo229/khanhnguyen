@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14a1c7ca-307e-4f13-aca0-930dbe0e8528" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TextEditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextEditorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TextView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextView.java" afterDir="false" />
-    </list>
+    <list default="true" id="14a1c7ca-307e-4f13-aca0-930dbe0e8528" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
